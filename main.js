@@ -17,7 +17,13 @@ function addKitchenItems() {
     kitchenItemsList.appendChild(li);
     kitchenInput.value = '';                                //to reset the value in enter kitchen items list textbox
     kitchenInput.focus();
-    console.log(li);
+    // console.log(li);
+
+    //create trash button
+
+    let trashBtn = document.createElement('i');
+    trashBtn.classList.add("fas","fa-trash")
+    console.log(trashBtn);
 }
 
 // step 1
