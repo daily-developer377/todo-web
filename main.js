@@ -33,7 +33,13 @@ function deletekitchenItem(event){
     console.log(event.target.classList[0]);
     if(event.target.classList[0] ==="fas"){
         let item = event.target.parentElement;
-        item.remove();
+        console.log(item);
+        item.classList.add('slideOut');                         
+        item.addEventListener('transitionend',function(){
+            // console.log("animation has been completed");
+            item.remove();
+        })
+        
     }
 }
 
