@@ -22,11 +22,25 @@ function addKitchenItems() {
     //create trash button
 
     let trashBtn = document.createElement('i');
-    trashBtn.classList.add("fas","fa-trash")
+    trashBtn.classList.add("fas","fa-trash");
+    li.appendChild(trashBtn);
     console.log(trashBtn);
+}
+
+// delete item from kitchenItemList
+
+function deletekitchenItem(event){
+    console.log(event.target.classList[0]);
+    if(event.target.classList[0] ==="fas"){
+        let item = event.target.parentElement;
+        item.remove();
+    }
 }
 
 // step 1
 // add an  event listener to the button
 
-addBtn.addEventListener('click', addKitchenItems);
+addBtn.addEventListener("click", addKitchenItems);
+
+kitchenItemsList.addEventListener("click", deletekitchenItem);
+
